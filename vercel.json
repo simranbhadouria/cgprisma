@@ -3,27 +3,7 @@
   "outputDirectory": "dist",
   "rewrites": [
     {
-      "source": "/api/blogs",
-      "destination": "/api/backend/api/blogs"
-    },
-    {
-      "source": "/api/blogs/:path*",
-      "destination": "/api/backend/api/blogs/:path*"
-    },
-    {
-      "source": "/api/auth/:path*",
-      "destination": "/api/backend/api/auth/:path*"
-    },
-    {
-      "source": "/api/upload",
-      "destination": "/api/backend/api/upload"
-    },
-    {
-      "source": "/api/test-db",
-      "destination": "/api/backend/api/test-db"
-    },
-    {
-      "source": "/api/chat",
+      "source": "/api/:path*",
       "destination": "/api/index.js"
     },
     {

@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "prisma generate --config backend/prisma7.config.ts && vite build",
+    "postinstall": "prisma generate --config backend/prisma7.config.ts",
     "lint": "eslint .",
     "preview": "vite preview"
   },

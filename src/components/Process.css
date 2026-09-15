@@ -1,0 +1,60 @@
+.process {
+    padding: 80px 8%;
+    background: #081b17;
+}
+
+.process h2 {
+    color: white;
+    text-align: center;
+    font-size: 42px;
+    margin-bottom: 60px;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.process-card {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: .3s;
+}
+
+.process-card:hover {
+    transform: translateY(-8px);
+}
+
+.process-card span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    background: #10b981;
+    color: white;
+    border-radius: 50%;
+    line-height: 60px;
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.process-card h3 {
+    margin-bottom: 15px;
+    color: #081b17;
+}
+
+.process-card p {
+    color: #666;
+    line-height: 1.7;
+}
+
+@media(max-width:900px) {
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+}

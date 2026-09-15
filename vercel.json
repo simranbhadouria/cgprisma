@@ -1,0 +1,38 @@
+{
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [
+    {
+      "source": "/api/blogs",
+      "destination": "/api/backend/api/blogs"
+    },
+    {
+      "source": "/api/blogs/:path*",
+      "destination": "/api/backend/api/blogs/:path*"
+    },
+    {
+      "source": "/api/auth/:path*",
+      "destination": "/api/backend/api/auth/:path*"
+    },
+    {
+      "source": "/api/upload",
+      "destination": "/api/backend/api/upload"
+    },
+    {
+      "source": "/api/test-db",
+      "destination": "/api/backend/api/test-db"
+    },
+    {
+      "source": "/api/chat",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/api",
+      "destination": "/api/index.js"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

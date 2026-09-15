@@ -1,0 +1,58 @@
+.cta {
+    padding: 90px 8%;
+    background: linear-gradient(135deg, #081b17, #0f3d2f);
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 850px;
+    margin: auto;
+}
+
+.cta h2 {
+    color: white;
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.cta p {
+    color: #d1d5db;
+    line-height: 1.8;
+    margin-bottom: 35px;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    background: #10b981;
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.secondary-btn {
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 15px 35px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.primary-btn:hover {
+    background: #059669;
+}
+
+.secondary-btn:hover {
+    background: white;
+    color: #081b17;
+}

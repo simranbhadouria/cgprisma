@@ -1,0 +1,40 @@
+.features {
+    padding: 80px 8%;
+    background: transparent;
+    color: white;
+}
+
+.features h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 30px;
+}
+
+.feature-card h3 {
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
+@media(max-width:900px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}

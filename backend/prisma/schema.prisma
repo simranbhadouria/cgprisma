@@ -1,0 +1,53 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model admin {
+  id            BigInt    @id @default(autoincrement())
+  email         String    @unique @db.VarChar(255)
+  password_hash String    @db.VarChar(255)
+  role          String?   @db.VarChar(50)
+  created_at    DateTime? @db.Timestamp(6)
+  updated_at    DateTime? @db.Timestamp(6)
+}
+
+model admin_password_resets {
+  id          BigInt      @id @default(autoincrement())
+  admin_id    BigInt
+  otp         String      @db.VarChar(6)
+  expires_at  DateTime    @db.Timestamp(6)
+  used        Int?
+  created_at  DateTime?   @db.Timestamp(6)
+  admin_users admin_users @relation(fields: [admin_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "fk_reset_admin")
+}
+
+model admin_users {
+  id                    BigInt                  @id @default(autoincrement())
+  email                 String                  @unique @db.VarChar(255)
+  password_hash         String                  @db.VarChar(255)
+  created_at            DateTime?               @db.Timestamp(6)
+  admin_password_resets admin_password_resets[]
+}
+
+model blogs {
+  id               BigInt    @id @default(autoincrement())
+  title            String    @db.VarChar(255)
+  description      String?   @db.VarChar(1000)
+  content          String?
+  image            String?   @db.VarChar(500)
+  author           String?   @db.VarChar(100)
+  category         String?   @db.VarChar(100)
+  created_at       DateTime? @db.Timestamp(6)
+  updated_at       DateTime? @db.Timestamp(6)
+  seo_title        String?   @db.VarChar(255)
+  meta_description String?   @db.VarChar(500)
+  seo_keywords     String?   @db.VarChar(500)
+  focus_keyword    String?   @db.VarChar(255)
+  url_slug         String?   @db.VarChar(255)
+  canonical_url    String?   @db.VarChar(500)
+}

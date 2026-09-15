@@ -1,0 +1,63 @@
+.solution-hero {
+    background: #0a1914;
+    color: white;
+    padding: 120px 8%;
+    text-align: center;
+}
+
+.solution-hero h1 {
+    font-size: 55px;
+    color: #22c55e;
+    margin-bottom: 20px;
+}
+
+.solution-hero p {
+    max-width: 750px;
+    margin: auto;
+    line-height: 1.8;
+    color: #d1d5db;
+}
+
+.solution-services {
+    padding: 80px 8%;
+    background: #0a1914;
+}
+
+.solution-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.solution-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    padding: 30px;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+    transition: .3s;
+}
+
+.solution-card:hover {
+    transform: translateY(-8px);
+    border-color: #22c55e;
+    box-shadow: 0 0 25px rgba(34, 197, 94, .25);
+}
+
+.solution-card h2 {
+    color: #22c55e;
+    margin-bottom: 15px;
+}
+
+.solution-card p {
+    color: #d1d5db;
+    line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+    .solution-grid {
+        grid-template-columns: 1fr;
+    }
+}

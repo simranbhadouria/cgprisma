@@ -1,0 +1,151 @@
+.security-section {
+    padding: 90px 8%;
+    background: #0a1914;
+}
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.security-heading {
+    text-align: center;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.security-heading span {
+    display: block;
+
+    color: #22c55e;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.security-heading h1 {
+    color: white;
+
+    font-size: 46px;
+    line-height: 1.2;
+
+    margin: 0 0 20px;
+}
+
+.security-heading h1 strong {
+    color: #22c55e;
+}
+
+.security-heading p {
+    color: #d1d5db;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 700px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   SECURITY CARDS
+========================= */
+
+.security-container {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+}
+
+.security-card {
+    background: rgba(255, 255, 255, 0.08);
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+
+    backdrop-filter: blur(15px);
+
+    border-radius: 18px;
+
+    padding: 35px;
+
+    transition: .35s;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+.security-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #22c55e;
+
+    box-shadow: 0 0 30px rgba(34, 197, 94, .35);
+}
+
+.security-icon {
+    width: 65px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(34, 197, 94, .15);
+
+    color: #22c55e;
+
+    margin-bottom: 25px;
+}
+
+.security-card h2 {
+    color: white;
+
+    margin-bottom: 18px;
+
+    font-size: 26px;
+}
+
+.security-card p {
+    color: #d1d5db;
+
+    line-height: 1.8;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .security-container {
+        grid-template-columns: 1fr;
+    }
+
+    .security-heading h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .security-section {
+        padding: 70px 5%;
+    }
+
+    .security-heading h1 {
+        font-size: 30px;
+    }
+
+    .security-heading p {
+        font-size: 15px;
+    }
+}

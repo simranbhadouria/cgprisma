@@ -1,0 +1,145 @@
+.stats {
+    padding: 90px 8%;
+    background: #0a1914;
+}
+
+/* =========================
+   STATS HEADING
+========================= */
+
+.stats-heading {
+    text-align: center;
+    max-width: 850px;
+    margin: 0 auto 55px;
+}
+
+.stats-heading span {
+    display: block;
+
+    color: #22c55e;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 15px;
+}
+
+.stats-heading h1 {
+    color: white;
+
+    font-size: 44px;
+    line-height: 1.2;
+
+    margin: 0 0 18px;
+}
+
+.stats-heading h1 strong {
+    color: #22c55e;
+}
+
+.stats-heading p {
+    color: #d1d5db;
+
+    font-size: 17px;
+    line-height: 1.7;
+
+    max-width: 650px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================
+   STATS CARDS
+========================= */
+
+.stats-container {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 30px;
+}
+
+.stat-card {
+    text-align: center;
+
+    padding: 40px 25px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .08);
+
+    border: 1px solid rgba(255, 255, 255, .12);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+
+    transition: .35s;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+
+    border-color: #22c55e;
+
+    box-shadow: 0 0 30px rgba(34, 197, 94, .35);
+}
+
+.stat-card h2 {
+    font-size: 55px;
+
+    font-weight: 800;
+
+    color: #22c55e;
+
+    margin-bottom: 12px;
+}
+
+.stat-card p {
+    color: #d1d5db;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1024px) {
+
+    .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .stats {
+        padding: 70px 20px;
+    }
+
+    .stats-heading h1 {
+        font-size: 34px;
+    }
+
+    .stats-heading p {
+        font-size: 15px;
+    }
+
+    .stats-container {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-card h2 {
+        font-size: 42px;
+    }
+
+}

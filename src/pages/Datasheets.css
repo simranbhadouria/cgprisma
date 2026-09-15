@@ -1,0 +1,109 @@
+.datasheet-card .download-btn {
+    display: inline-block;
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+    text-decoration: none;
+}
+
+.datasheet-card .download-btn:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(34, 197, 94, .4);
+}
+
+.datasheets-page {
+    padding: 100px 8%;
+    background: #0a1914;
+    color: white;
+}
+
+.datasheets-header {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+}
+
+.datasheets-tag {
+    display: inline-block;
+    background: rgba(34, 197, 94, .15);
+    color: #22c55e;
+    padding: 8px 18px;
+    border-radius: 30px;
+    font-weight: 600;
+    border: 1px solid rgba(34, 197, 94, .3);
+}
+
+.datasheets-header h1 {
+    font-size: 56px;
+    color: white;
+    margin: 25px 0;
+}
+
+.datasheets-header p {
+    color: #d1d5db;
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.datasheet-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 70px;
+}
+
+.datasheet-card {
+    background: rgba(255, 255, 255, .08);
+    border: 1px solid rgba(255, 255, 255, .15);
+    backdrop-filter: blur(15px);
+    padding: 35px;
+    border-radius: 20px;
+    transition: .3s;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+.datasheet-card:hover {
+    transform: translateY(-8px);
+    border-color: #22c55e;
+    box-shadow: 0 0 25px rgba(34, 197, 94, .25);
+}
+
+.datasheet-card h3 {
+    margin-bottom: 15px;
+    color: #22c55e;
+}
+
+.datasheet-card p {
+    color: #d1d5db;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+.datasheet-card button {
+    background: #22c55e;
+    color: white;
+    border: none;
+    padding: 14px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.datasheet-card button:hover {
+    background: #16a34a;
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px rgba(34, 197, 94, .4);
+}
+
+@media (max-width:900px) {
+    .datasheet-grid {
+        grid-template-columns: 1fr;
+    }
+}

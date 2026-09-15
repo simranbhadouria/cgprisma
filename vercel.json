@@ -1,14 +1,6 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "functions": {
-    "api/backend/[...path].js": {
-      "runtime": "nodejs24.x"
-    },
-    "api/index.js": {
-      "runtime": "nodejs24.x"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/blogs",

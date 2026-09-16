@@ -154,18 +154,24 @@ function Blog() {
     // =========================
     // FORMAT DATE
     // =========================
-    const formatDate = (date) => {
-        if (!date) {
-            return "";
-        }
+  const formatDate = (date) => {
+    if (!date) {
+        return "";
+    }
 
-        return new Date(date).toLocaleDateString("en-US", {
-            month: "long",
-            day: "numeric",
-            year: "numeric"
-        });
-    };
+    const parsedDate = new Date(date);
 
+    if (Number.isNaN(parsedDate.getTime())) {
+        return "";
+    }
+
+    return parsedDate.toLocaleDateString("en-US", {
+        timeZone: "UTC",
+        month: "short",
+        day: "numeric",
+        year: "numeric"
+    });
+};
     // =========================
     // IMAGE ERROR
     // =========================

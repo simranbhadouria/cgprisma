@@ -154,23 +154,29 @@ function Blog() {
     // =========================
     // FORMAT DATE
     // =========================
-  const formatDate = (date) => {
+const formatDate = (date) => {
     if (!date) {
         return "";
     }
 
-    const parsedDate = new Date(date);
+    try {
+        // PostgreSQL / ISO timestamp
+        const parsedDate = new Date(date);
 
-    if (Number.isNaN(parsedDate.getTime())) {
+        if (!Number.isNaN(parsedDate.getTime())) {
+            return parsedDate.toLocaleDateString("en-US", {
+                timeZone: "UTC",
+                month: "short",
+                day: "numeric",
+                year: "numeric"
+            });
+        }
+
+        return "";
+    } catch (error) {
+        console.error("Date formatting error:", error);
         return "";
     }
-
-    return parsedDate.toLocaleDateString("en-US", {
-        timeZone: "UTC",
-        month: "short",
-        day: "numeric",
-        year: "numeric"
-    });
 };
     // =========================
     // IMAGE ERROR

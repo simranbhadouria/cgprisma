@@ -2,7 +2,7 @@
   "name": "Cynox-clean",
   "private": true,
   "version": "0.0.0",
-  "type": "module",
+  "type": "commonjs"
   "scripts": {
     "dev": "vite",
     "build": "prisma generate --config backend/prisma7.config.ts && vite build",
